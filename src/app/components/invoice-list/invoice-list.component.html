@@ -1,0 +1,25 @@
+<table class="table table-dark">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Invoice Date</th>
+    <th scope="col">Gross Amount</th>
+    <th scope="col">Discount</th>
+    <th scope="col">Net Amount</th>
+    <th scope="col">Customer Name</th>
+    <th scope="col">Status</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of dataList">
+    <th scope="row">{{item.id}}</th>
+    <td>{{item.invoiceDate}}</td>
+    <td>{{item.grossAmount}}</td>
+    <td>{{item.discount}}</td>
+    <td>{{item.netAmount}}</td>
+    <td>{{item.customerName}}</td>
+    <td *ngIf="item.status === 1">Pending</td>
+    <td *ngIf="item.status === 2">Approved</td>
+  </tr>
+  </tbody>
+</table>
